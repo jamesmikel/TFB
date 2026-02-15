@@ -9,6 +9,7 @@
     "react-dom": "19.2.4",
     "react-router-dom": "7.9.6",
     "axios": "1.13.2",
+    "dotenv": "17.2.3",
     "react-countup": "6.5.3",
     "recharts": "3.7.0",
     "react-is": "19.2.4",
