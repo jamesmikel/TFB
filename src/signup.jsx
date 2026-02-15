@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import { useAuth } from "./Authcontent";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
-import "dotenv/config";
 
 const api_url = process.env.api_url;
 
@@ -453,3 +452,4 @@ function Signup() {
 }
 
 export default Signup;
+
