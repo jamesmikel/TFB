@@ -1,0 +1,1899 @@
+:root {
+  background-color: #0b0f2a;
+}
+
+input {
+  font-family: "Montserrat";
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hides unwanted horizontal scroll */
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+nav.Header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #07091a;
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  background: #0a0d44;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Header-div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links li a:hover,
+.sidebar-links li a:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* Optional glowing background */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.Sign-up,
+.Log-in,
+.Account,
+.Log-out {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  background: #0a0d44;
+  color: white;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* <-- This line adds shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.Log-in,
+.Account {
+  background: #02030b;
+}
+.Sign-up:hover,
+.Log-in:hover .Account:hover,
+.Log-out:hover,
+.proceed-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* Optional glowing background */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.Header-div.show .nav-links li a:hover,
+.Header-div.show .Sign-up:hover,
+.Header-div.show .Log-in:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* Optional glowing background */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.first-section {
+  background-image: url("https://thecurrencyanalytics.com/wp-content/uploads/2024/05/XRP-price-jpg.webp");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  padding: 60px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+.bitcoin-price {
+  margin-top: -20px;
+  font-weight: 600;
+  width: 242.5px;
+  height: 147.6px;
+  text-transform: uppercase;
+  color: white;
+  text-align: left;
+  background: #07091a;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bitcoin-price img {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.bitcoin-price p {
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.bitcoin-price span {
+  color: #1e26b6;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.price {
+  margin-left: 10px;
+}
+
+.Title {
+  text-align: left;
+}
+
+.Title h1 {
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 56px;
+  font-weight: 400;
+  padding-left: 0px;
+  line-height: 70px;
+  font-family: "Oswald", sans-serif;
+}
+.Title span {
+  color: #0d0f2d;
+}
+
+.Title p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #07091a;
+}
+.Title .Access {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  border-radius: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #0d0d1f, #101020); /* dark gradient */
+  padding: 8px 36px;
+  font-family: "Oswald", sans-serif;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* soft outer glow */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* thin border */
+  transition: all 0.3s ease;
+}
+
+.Title .Access:hover {
+  background: linear-gradient(
+    to bottom,
+    #1a1a2a,
+    #232333
+  ); /* slightly brighter dark */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08); /* subtle white shadow */
+  transform: scale(1.04);
+  color: #ffffff; /* stay white */
+}
+
+.plan-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #07091a;
+  margin: -140px auto;
+  padding: 60px 20px;
+  border-radius: 16px;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.plan-div h1 {
+  color: #fff;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-top: 0px;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.plan-div span {
+  color: #0c1142;
+}
+
+.plan-box-div {
+  display: flex;
+  height: 70%;
+  padding: 50px 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+}
+.plan-box-div2 {
+  width: 90%;
+  margin-top: 80px;
+}
+.plan-box-div2 .btc-img {
+  display: flex;
+}
+
+.plan-box {
+  flex: 1 1 280px;
+  max-width: 40%;
+  background-size: 100%;
+  background: #080c32 url("https://i.imgur.com/RabvBmh.png") no-repeat center
+    top;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+.plan-box .btc-img {
+  height: 94px;
+  margin: auto;
+  margin-top: -68px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.plan-box .row {
+  justify-content: center;
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.plan-box ul {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 0 -54px;
+}
+
+.plan-box ul li {
+  font-family: "Montserrat";
+  width: 80%;
+  list-style: none;
+  line-height: 36px;
+  background: #1e26b6;
+  text-align: left;
+  border-radius: 4px;
+  margin: 5px 20px;
+  border: 1px solid #1e26b6;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  padding-left: 44px;
+}
+
+.plan-box ul li span {
+  font-size: 14px;
+  color: #02030b;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.plan-box ul img {
+  margin: 0 5px -5.6px -30px;
+}
+
+.plan-top {
+  width: 100%;
+  font-family: "Montserrat";
+  align-content: center;
+  align-items: center;
+  color: white;
+  display: flex;
+}
+.plan-top2 {
+  font-family: "Montserrat";
+
+  color: white;
+}
+
+.plan-top .Column {
+  width: 58.33333333%;
+}
+
+.plan-top .percent {
+  font-size: 48px;
+  color: #02030b;
+  font-weight: 600;
+  text-align: right;
+  line-height: 42px;
+}
+.percent span {
+  color: #02030b;
+}
+
+.plan-top p {
+  margin: 0 20px;
+  line-height: 20px;
+  text-align: left;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+  background: #07091a;
+  background-position: center;
+  margin: 160px auto;
+  margin-bottom: 0;
+}
+
+.first-div {
+  background: url("https://m.bbb.org/prod/corecmsimages/2023/aa45bed5-8824-4f19-b7c9-ac767815965f.jpg")
+    no-repeat center top;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  padding-bottom: 90px;
+  margin-left: auto;
+}
+
+.welcome-inner {
+  padding: 30px 50px;
+  color: #ffff;
+}
+
+.welcome-inner h1 {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+
+.welcome-inner p {
+  font-family: "Montserrat";
+  text-align: justify;
+  font-size: 14px;
+  margin: 0;
+  line-height: 26px;
+}
+
+.welcome-inner a {
+  position: absolute;
+  left: 0;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  border-radius: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #0d0d1f, #101020); /* dark gradient */
+  padding: 8px 36px;
+  font-family: "Oswald", sans-serif;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* soft outer glow */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* thin border */
+  transition: all 0.3s ease;
+}
+
+.welcome-inner a:hover {
+  background: linear-gradient(
+    to bottom,
+    #1a1a2a,
+    #232333
+  ); /* slightly brighter dark */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08); /* subtle white shadow */
+  transform: scale(1.04);
+  color: #ffffff; /* stay white */
+}
+
+.company-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 70px 0 50px 25px;
+  gap: 20px;
+  width: 100%;
+}
+
+.company {
+  color: #fff;
+  font-family: "Montserrat";
+  padding: 20px;
+  max-height: 400px;
+  border-radius: 36px;
+  background-color: #080c32;
+  background-image: url("https://i.imgur.com/mDrw8p3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-buttons a {
+  padding: 15px;
+  display: flex;
+  border-radius: 6px;
+  background: #1e26b6;
+  text-align: left;
+  color: white;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.about-top span {
+  color: #02030b;
+  font-weight: 500;
+  font-size: 30px;
+  display: block;
+  margin-top: 6px;
+}
+
+.about-buttons a img {
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 14px;
+}
+
+.about-buttons a span {
+  color: #080c32;
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+.company h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin: -10px 0px 20px;
+  text-transform: uppercase;
+}
+
+.company2 {
+  display: flex;
+  width: 64%;
+}
+
+.img-container {
+  display: flex;
+  background-color: white;
+  width: 100%;
+}
+
+.company-right {
+  background-image: url("https://i.imgur.com/8Z1ykcY.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 60%;
+  border-radius: 36px 0 0 36px;
+}
+
+.B-Image {
+  background-image: url("https://i.imgur.com/xg8t0Nd.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 36px 36px 0;
+  min-width: 40%;
+}
+
+.about-top {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contact-block-wrap {
+  font-family: "Oswald";
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 15% 0 20% 0;
+  align-items: center;
+}
+
+.contact-block {
+  display: flex;
+  align-items: center;
+}
+
+.contact-block img {
+  height: 60px;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 20px;
+}
+
+.offer-ctn {
+  background: #0a0d44;
+  max-width: 1120px;
+  margin: -3% auto;
+  margin-bottom: 0;
+}
+
+.offer-ctn h1 {
+  padding-top: 20px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  text-align: center;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.offer-ctn span {
+  font-weight: 700;
+  color: #07091a;
+}
+
+.offers {
+  display: flex;
+  gap: 20px;
+  width: 73.5vw;
+  padding-bottom: 60px;
+  margin-left: 20px;
+}
+.offers img {
+  height: 70px;
+  border-radius: 10px;
+}
+
+.offer-box {
+  color: #fff;
+  background: #1e26b6;
+  max-width: 100%;
+  font-family: "Montserrat";
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.final-div {
+  background: #07091a;
+  background-image: url("https://www.shutterstock.com/image-vector/bitcoin-digital-currency-futuristic-money-600nw-1958202388.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 350px;
+  max-width: 1120px;
+}
+
+.affiliate-wrap,
+.affiliate-wrap-affiliate {
+  width: 50%;
+  font-family: "Montserrat";
+  margin-left: auto;
+}
+
+.affiliate-wrap h3,
+.affiliate-wrap-affiliate h3 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.affiliate-wrap h3 span,
+.affiliate-wrap-affiliate h3 span {
+  font-weight: 700;
+  color: #1e26b6;
+}
+
+.affiliate {
+  display: flex;
+  gap: 20px;
+}
+
+.affiliate-percent {
+  padding: 10px;
+  display: flex;
+  color: #fff;
+  border-radius: 6px;
+  background: #07091a;
+  margin-top: 10px 0;
+  overflow: hidden;
+}
+.affiliate-percent .number {
+  font-size: 50px;
+  padding: 5px 15px 5px 15px;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #0a0d44);
+  border-radius: 20px;
+  margin-right: 10px;
+  float: left;
+}
+
+.affiliate-percent .number span {
+  font-size: 30px;
+}
+.affiliate-percent h4 {
+  padding-right: 50px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 22px;
+}
+.affiliate-percent h4 span {
+  color: #1e26b6;
+  font-weight: 600;
+  display: block;
+}
+.affiliate-wrap p,
+.affiliate-wrap-affiliate p {
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.info-wrap {
+  display: flex;
+}
+
+.info-pack {
+  width: 43%;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  background: #07091a;
+  margin-left: auto;
+  margin-top: 15%;
+  margin-bottom: -25%;
+}
+
+.info-pack img {
+  height: 70px;
+  padding-right: 20px;
+}
+
+.info-pack h3 {
+  line-height: 2px;
+  color: #1e26b6;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.info-pack p {
+  margin: 0;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.footer {
+  justify-content: center;
+  max-width: 1040px;
+  background-color: #02030b; /* dark purple */
+  padding: 20px 40px;
+  margin: auto;
+  color: white;
+  margin-top: auto;
+  display: flex;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* responsive on small screens */
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-right ul {
+  list-style: none;
+  margin: 0 0 0 -40px;
+  flex-direction: column;
+  padding-top: 10px;
+  display: flex;
+  gap: 10px; /* spacing between links */
+  flex-wrap: wrap;
+}
+
+.footer-right ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-right ul li a:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* Optional glowing background */
+  transition: box-shadow 0 0.3s ease, background-color 0.3s ease;
+}
+
+.about-head {
+  background: #07091a;
+  padding: 60px;
+  max-width: 1000px;
+  color: #fff;
+  font-family: "Oswald";
+  margin: 0.5% auto -10% auto;
+  font-weight: 400;
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about-head span {
+  color: #02030b;
+}
+.affiliate-link {
+  width: 72%;
+  display: flex;
+  justify-content: center;
+
+  border: 1px solid #04050f;
+  background: #07091a;
+  color: white;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.affiliate-link p {
+  float: left;
+  width: 32%;
+  line-height: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px 10px 10px 60px;
+  background: url("https://capital-investments.live/styles/images/banners.png")
+    no-repeat 25px center;
+  font-weight: 600;
+}
+.affiliate-link .h2 {
+  margin: 0;
+  align-content: center;
+  background: #0a0d44;
+  font-family: Montserrat;
+  float: left;
+
+  text-transform: lowercase;
+  line-height: 30px;
+  width: 68%;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+.affiliate-table {
+  font-family: Montserrat;
+  color: #ffff;
+  padding-bottom: 100px;
+
+  width: 72%;
+  margin: auto;
+}
+.affiliate-table tr {
+  background: #07091a;
+  justify-content: center;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.telegram-widget {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.chat-text {
+  background-color: #0088cc;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-me {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  display: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: green;
+  text-align: center;
+}
+
+.faq-h2 {
+  background: #07091a;
+  padding: 60px;
+  max-width: 1000px;
+  color: #fff;
+  font-family: "Oswald";
+  margin: 0.5% auto 5% auto;
+  font-weight: 400;
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.faq-item {
+  border: 1px solid #0d0f2d;
+  border-radius: 8px;
+  max-width: 1120px;
+  overflow: hidden;
+  margin: auto auto 10px auto;
+  font-family: "Montserrat";
+  background: #1e26b6;
+  color: white;
+}
+
+.faq-question {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.faq-answer {
+  max-height: 0; /* hidden by default */
+  overflow: hidden; /* prevent overflow */
+  transition: max-height 0.4s ease; /* smooth dropdown */
+  padding: 0 15px;
+}
+
+.faq-answer.open {
+  max-height: 200px; /* enough to show the answer */
+  padding: 15px; /* restore padding when open */
+}
+.affiliate-js {
+  display: flex;
+  background: #07091a;
+  background-image: url("https://www.shutterstock.com/image-vector/bitcoin-digital-currency-futuristic-money-600nw-1958202388.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+  font-family: "Montserrat";
+  padding-top: 20px;
+  padding-bottom: 300px;
+  max-width: 1120px;
+}
+.affiliate-footer {
+  width: 100vw;
+}
+.affiliate-h1 {
+  background: #07091a;
+  padding: 60px;
+  max-width: 1000px;
+  color: #fff;
+  font-family: "Oswald";
+  margin: 0.5% auto 5% auto;
+  font-weight: 400;
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.affiliate-wrap-affiliate h3,
+.affiliate-js p {
+  margin-left: -80px;
+}
+
+.affiliate-wrap-affiliate .affiliate {
+  margin-left: -80px;
+  flex-wrap: wrap;
+}
+
+.affiliate-js-h3 {
+  color: #fff;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin: 40px 0px 20px;
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 52px;
+}
+
+.program-wrap,
+.program {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.program-wrap {
+  gap: 30px;
+  justify-content: center;
+}
+
+.program {
+  color: #fff;
+  font-family: "Montserrat";
+  padding: 30px;
+  background: #07091a;
+  width: 32%;
+  border-radius: 40px;
+}
+
+.program-div {
+  background: #0b0f2a;
+  padding-bottom: 40px;
+}
+
+.Rules-h1,
+.contact,
+.register-acct,
+.member-login,
+.Privacy {
+  background: #07091a;
+  padding: 60px;
+  max-width: 1000px;
+  color: #fff;
+  font-family: "Oswald";
+  margin: 0.5% auto 5% auto;
+  font-weight: 400;
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.terms {
+  color: #fff;
+  font-family: "Montserrat";
+  max-width: 1120px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  width: 80%;
+  max-width: 1100px;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 48%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  height: 100px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+button {
+  background: #1e26b6;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background: #07091a;
+  padding: 20px;
+  border-radius: 8px;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.info-card img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.Contact-P {
+  max-width: 1120px;
+  margin: auto;
+  margin-top: -20px;
+  background: #1e26b6;
+  padding: 2px;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: "Montserrat";
+}
+
+.form-cotn {
+  width: 60%;
+}
+
+.form-inner {
+  background-color: #1e26b6;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.Signup-form {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 10%;
+  border-radius: 10px;
+  background: #07091a;
+  color: #fff;
+  font-family: "Montserrat";
+}
+
+.Signup-form td,
+.login td {
+  width: 10%;
+}
+
+td {
+  padding-bottom: 6px;
+}
+
+.Signup-form input,
+.login input {
+  width: 100%;
+  border-radius: 10px;
+  height: 46px;
+}
+
+.L-container {
+  background: url("https://m.bbb.org/prod/corecmsimages/2023/aa45bed5-8824-4f19-b7c9-ac767815965f.jpg")
+    no-repeat center top;
+  background-position: center;
+  background-size: cover;
+  max-width: 960px;
+  height: 30vw;
+  padding: 80px;
+  margin: auto;
+}
+
+.login {
+  font-family: "Montserrat";
+  background: #07091a;
+  padding: 50px;
+  border-radius: 12px;
+  color: #fff;
+  height: 70%;
+  width: 50%;
+  margin-left: auto;
+}
+
+.login a {
+  color: #1e26b6;
+  padding: 10px;
+}
+
+.login input {
+  margin-bottom: 6px;
+}
+.login button {
+  margin-bottom: 10%;
+  font-family: "Montserrat";
+}
+
+.login img {
+  display: block;
+}
+
+.Money-box {
+  background: #07091a;
+  padding-bottom: 20px;
+  width: 72%;
+  color: #fff;
+  font-family: Roboto, "SF Pro Display", sans-serif;
+  margin: 0.5% auto 5% auto;
+  font-weight: 400;
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.Money-box2 {
+  color: #fff;
+  font-family: Roboto, "SF Pro Display", sans-serif;
+  margin-top: -10pc;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.dashboard {
+  background: #07091a;
+  padding: 60px;
+  width: 100%;
+  color: #fff;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.dashboard-section ul {
+  display: flex;
+  margin-left: -40px;
+  list-style: none;
+  gap: 20px;
+  margin-top: ;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.dashboard-section li,
+.deposit {
+  font-family: "Montserrat";
+  width: 150px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  background: #060816;
+}
+
+.dashboard-section li a,
+.deposit {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.dashboard-section li:hover,
+.acct-popup.show {
+  background: #0a0e18;
+  transition: background 0.1s ease;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+
+.hamburger {
+  background: #07091a;
+  position: absolute;
+  z-index: 1200;
+  left: 2px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100vh;
+  background: #07091a;
+  transition: left 0.3s ease;
+  z-index: 1100;
+  padding-top: 100px; /* clears header */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-links {
+  left: 0;
+  list-style: none;
+  flex-direction: column;
+  color: #0088cc;
+  position: absolute;
+}
+
+.sidebar-links li {
+  padding: 12px 20px;
+}
+.acct-popup {
+  font-family: "Montserrat";
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #02030b;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.285);
+  color: #fff;
+  bottom: 200px;
+  transition: 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  width: 300px;
+  gap: 20px;
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.acct-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.acct-popup p {
+  margin: 0;
+}
+.acct-popup p:hover {
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 90%;
+  cursor: pointer;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+.acct-popup .edit:hover {
+  background: green;
+  transition: background 0.25s ease;
+}
+.acct-popup .log:hover {
+  background: red;
+  transition: background 0.25s ease;
+}
+.acct-profile {
+  position: absolute;
+  color: #fff;
+  bottom: 100px;
+  border-radius: 30px;
+  width: 230px;
+  padding: 10px 4px;
+  display: flex;
+  align-items: center;
+}
+
+.acct-profile:hover {
+  cursor: pointer;
+  background: #02030b;
+  transition: background 0.2s ease;
+}
+
+.acct-profile img {
+  height: 64px;
+  width: 64px;
+  margin: 0 10px;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.acct-profile p {
+  font-family: Montserrat;
+  margin: 0;
+}
+
+.svg {
+  font-weight: 400;
+  margin: 10px 0 20 -20px;
+}
+.svg2 {
+  margin-top: -10px;
+}
+
+.make-deposit h1,
+.deposit-p {
+  font-family: "Montserrat";
+  text-align: center;
+  color: #fff;
+}
+
+.deposit-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.deposit-plans {
+  border-radius: 30px;
+  padding: 30px;
+  font-family: Montserrat;
+  background: #07091a;
+  color: #fff;
+}
+
+.proceed-form {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: -10%;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Montserrat";
+}
+
+.select {
+  font-family: "Montserrat";
+  font-size: 15px;
+  background: #02030b;
+  min-width: 190%;
+  color: #fff;
+}
+
+.proceed-btn {
+  background: #02030b;
+
+  margin-left: 30px;
+  font-family: "Montserrat";
+}
+.confirmation {
+  background: url("https://m.bbb.org/prod/corecmsimages/2023/aa45bed5-8824-4f19-b7c9-ac767815965f.jpg")
+    no-repeat center top;
+  background-position: center;
+  background-size: cover;
+  max-width: 960px;
+  height: 30vw;
+  padding: 80px;
+  margin: auto;
+}
+
+.token-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Montserrat;
+  color: #fff;
+}
+.token-details > p {
+  font-size: 23px;
+  margin-bottom: -18px;
+}
+/* General styles for the component */
+.min-h-screen {
+  margin: auto;
+  min-height: 100vh; /* bg-gray-900 */
+  color: #ffffff; /* text-white */
+  background: #07091a;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.border-b {
+  border-bottom: 1px solid #1f2937; /* border-gray-800 */
+}
+
+/* Header styling */
+.populartokens {
+  font-family: "Montserrat";
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: bold; /* font-bold */
+  text-align: left; /* text-center */
+}
+
+/* Tabs container */
+.tabs,
+.tabs-t {
+  display: flex;
+  gap: 2rem; /* gap-8 */
+  margin-top: 1.5rem; /* mt-6 */
+  padding-bottom: 1rem; /* pb-4 */
+  border-bottom: 1px solid #1f2937; /* border-b border-gray-800 */
+}
+
+/* Tab buttons */
+.tabs button,
+.tabs-t button {
+  background-color: #02030b;
+  padding-bottom: 0.5rem; /* pb-2 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  transition: all 0.2s ease; /* transition-all */
+}
+
+.tabs button.text-cyan-400 {
+  color: #06b6d4; /* text-cyan-400 */
+  border-bottom: 4px solid #06b6d4; /* border-b-4 border-cyan-400 */
+}
+
+.tabs button.text-gray-400 {
+  color: #9ca3af; /* text-gray-400 */
+}
+
+.tabs button:hover.text-white {
+  color: #ffffff; /* hover:text-white */
+}
+
+/* Subtitle */
+.subtitle {
+  text-align: center; /* text-center */
+  color: #9ca3af; /* text-gray-400 */
+  margin-top: 1rem; /* mt-4 */
+  font-size: 0.875rem; /* text-sm */
+}
+
+/* Tokens list container */
+.tokens {
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+  margin-top: 1.5rem; /* mt-6 */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space-y-4 */
+}
+
+/* Individual token card */
+.tokens > div {
+  display: flex;
+  cursor: pointer;
+  align-items: center; /* flex items-center */
+  justify-content: space-between; /* justify-between */
+  background-color: #0a0e18; /* bg-gray-800/50 */
+  border-radius: 0.5rem; /* rounded-lg */
+  padding: 1rem; /* p-4 */
+}
+
+/* Token info left side */
+.tokens > div > div:first-child {
+  display: flex;
+  align-items: center; /* flex items-center */
+  gap: 1rem; /* gap-4 */
+}
+
+/* Rank number */
+.tokens > div > div:first-child > span {
+  color: #9ca3af; /* text-gray-500 */
+  width: 2rem; /* w-8 */
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Token image */
+.tokens > div img {
+  width: 2.5rem; /* w-10 */
+  height: 2.5rem; /* h-10 */
+  border-radius: 50%; /* rounded-full */
+}
+
+/* Token name and sub-info */
+.tokens > div > div:first-child > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Token name */
+.tokens > div > div:first-child > div > p:first-child {
+  font-weight: bold; /* font-bold */
+}
+
+/* MCap and Vol info */
+.tokens > div > div:first-child > div > p:last-child {
+  font-size: 0.75rem; /* text-sm */
+  color: #9ca3af; /* text-gray-400 */
+}
+
+/* Price and % change right side */
+.tokens > div > div:last-child {
+  text-align: right; /* text-right */
+}
+
+/* Price */
+.tokens > div > div:last-child > p:first-child {
+  font-weight: bold; /* font-bold */
+}
+
+/* % Change */
+.tokens > div > div:last-child > p:last-child {
+  font-size: 0.75rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+}
+
+/* Green for positive change */
+.text-green-400 {
+  color: #34d399; /* text-green-400 */
+}
+
+/* Red for negative change */
+.text-red-400 {
+  color: #f87171; /* text-red-400 */
+}
+
+/* Loading message */
+.text-center.mt-10 {
+  text-align: center;
+  margin-top: 2.5rem; /* mt-10 */
+}
+
+/* View all button (add this to the JSX for the button) */
+.view-all {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem; /* mt-6 */
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.75rem; /* p-3 */
+  background-color: #1f2937; /* bg-gray-800 */
+  border-radius: 0.5rem; /* rounded-lg */
+  transition: background-color 0.2s ease;
+}
+
+.view-all:hover {
+  background-color: #374151; /* hover:bg-gray-700 */
+}
+.Profile {
+  background: #07091a;
+  max-width: 1056px;
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.Profile > h1,
+P {
+  font-family: "Montserrat";
+}
+
+.upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle-upload {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background: #1f2937; /* dark gray */
+  border: 2px solid #38bdf8; /* cyan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.circle-upload:hover {
+  background: #111827;
+}
+
+.circle-upload span {
+  font-size: 48px;
+  color: #38bdf8;
+}
+
+.circle-upload img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hidden {
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .plan-top {
+    flex-direction: column;
+  }
+
+  .plan-box {
+    background-size: 100%;
+  }
+
+  .welcome-inner {
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    padding-right: 40px;
+  }
+
+  .company-container {
+    justify-content: center;
+  }
+
+  .company {
+    width: 80%;
+  }
+
+  .company2 {
+    width: 100vw;
+  }
+  .affiliate {
+    flex-direction: column;
+  }
+  .program {
+    width: 40%;
+  }
+  .f-container {
+    flex-direction: column;
+  }
+  .form-cotn {
+    width: 80%;
+  }
+  .Signup-form {
+    width: 80%;
+  }
+  .L-container,
+  .confirmation {
+    height: 100%;
+  }
+  .login {
+    width: 80%;
+  }
+  .Signup-form td,
+  .login td {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Header-div {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .Header-div.show {
+    display: flex;
+  }
+
+  .Header img {
+    height: 50px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle:hover {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+    color: #fff;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Optional glowing background */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .bitcoin-price {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 6px;
+    font-weight: 600;
+    width: 95.2%;
+    height: 78px;
+    text-transform: uppercase;
+    color: white;
+    background: #07091a;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .bitcoin-price p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .Title p {
+    margin-bottom: 38px;
+  }
+
+  .plan-box {
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .plan-top {
+    flex-direction: column;
+  }
+  .plan-top .percent {
+    font-size: 48px;
+    padding: 10px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 42px;
+  }
+  .plan-top p {
+    text-align: center;
+  }
+
+  .plan-box ul li {
+    flex: 1;
+    width: 85.5%;
+  }
+
+  .container {
+    margin-top: -10px;
+  }
+
+  .welcome-inner {
+    margin: 0;
+  }
+
+  .offers {
+    flex-direction: column;
+  }
+
+  .offers img {
+    padding-right: 10px;
+  }
+
+  .company {
+    margin-left: -50px;
+  }
+
+  .B-Image {
+    border-radius: 36px;
+    min-height: 150vw;
+  }
+
+  .company-right {
+    border-radius: 36px;
+  }
+
+  .company2 {
+    flex-direction: column;
+  }
+
+  .offers {
+    width: 100%;
+  }
+
+  .offer-box {
+    width: 100%;
+  }
+
+  .final-div {
+    height: 400px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .affiliate {
+    justify-content: center;
+  }
+
+  .affiliate-wrap,
+  .affiliate-wrap-affiliate {
+    margin-bottom: -31px;
+    width: 100%;
+    float: left;
+    padding: 20px;
+  }
+  .info-pack {
+    width: 100%;
+  }
+  .footer {
+    margin-top: 400px;
+  }
+  .footer-right ul {
+    gap: 10px;
+    padding-top: 10px;
+    flex-direction: column;
+  }
+  .affiliate {
+    flex-direction: column;
+  }
+  .affiliate-wrap-affiliate h3,
+  .affiliate-js p {
+    margin-left: 0;
+  }
+  .affiliate-wrap-affiliate .affiliate {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .program {
+    width: 100%;
+    padding: 70px;
+  }
+
+  .login {
+    width: 80%;
+  }
+
+  .Money-box {
+    width: 100%;
+  }
+}

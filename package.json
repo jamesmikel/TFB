@@ -1,0 +1,33 @@
+{
+  "name": "es6-spread-operator-practice",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "19.2.4",
+    "react-router-dom": "7.9.6",
+    "axios": "1.13.2",
+    "react-countup": "6.5.3",
+    "dotenv": "17.2.3",
+    "react-dom": "19.2.4",
+    "recharts": "3.7.0",
+    "react-is": "19.2.4"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "proxy": "https://rj9zfs-3000.csb.app"
+}
