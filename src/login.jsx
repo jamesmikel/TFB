@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import Heading from "./Header";
 import Footer from "./Footer";
 import axios from "axios";
-import "dotenv/config";
 
 import { useAuth } from "./Authcontent";
 const api_url = process.env.api_url;
@@ -119,3 +118,4 @@ export default function Login() {
     </div>
   );
 }
+
