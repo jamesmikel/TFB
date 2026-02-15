@@ -6,24 +6,27 @@
   "main": "src/index.js",
   "dependencies": {
     "react": "19.2.4",
+    "react-dom": "19.2.4",
     "react-router-dom": "7.9.6",
     "axios": "1.13.2",
     "react-countup": "6.5.3",
-    "dotenv": "17.2.3",
-    "react-dom": "19.2.4",
     "recharts": "3.7.0",
     "react-is": "19.2.4"
   },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "@vitejs/plugin-react": "^4.3.0"
+  },
   "overrides": {
-  "@headlessui/react": {
-    "react": "^19.0.0"
-  }
+    "@headlessui/react": {
+      "react": "^19.0.0"
+    }
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "browserslist": [
     ">0.2%",
