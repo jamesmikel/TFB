@@ -3,7 +3,6 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "dotenv/config";
 const api_url = process.env.api_url;
 const AuthContext = createContext();
 
@@ -60,3 +59,4 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+
