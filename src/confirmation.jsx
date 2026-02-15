@@ -1,7 +1,6 @@
 import Heading from "./Header";
 import Footer from "./Footer";
 import axios from "axios";
-import "dotenv/config";
 
 import { useToken } from "./TokenDetails";
 import { useState } from "react";
@@ -172,3 +171,4 @@ export default function ConfirmDeposit() {
     </div>
   );
 }
+
