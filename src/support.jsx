@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import axios from "axios";
 import { useAuth } from "./Authcontent";
 import React, { useState } from "react";
-import "dotenv/config";
 
 const api_url = process.env.api_url;
 
@@ -250,3 +249,4 @@ const Support = () => {
   );
 };
 export default Support;
+
