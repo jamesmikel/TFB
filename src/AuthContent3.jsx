@@ -2,7 +2,6 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 
 import axios from "axios";
-import "dotenv/config";
 const api_url = process.env.api_url;
 const AuthContext3 = createContext();
 
@@ -65,3 +64,4 @@ export const AuthProvider3 = ({ children }) => {
 };
 
 export const useAuth3 = () => useContext(AuthContext3);
+
