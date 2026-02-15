@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Heading from "./Header";
 import Footer from "./Footer";
 import { useAuth } from "./Authcontent";
-import "dotenv/config";
 
 import { useNavigate } from "react-router-dom";
 const api_url = process.env.api_url;
@@ -110,3 +109,4 @@ function ProfilePicUploader() {
 }
 
 export default ProfilePicUploader;
+
