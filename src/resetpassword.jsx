@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import Heading from "./Header";
 import Footer from "./Footer";
-import "dotenv/config";
 
 function ResetPassword() {
   const api_url = process.env.api_url;
@@ -207,3 +206,4 @@ function ResetPassword() {
 }
 
 export default ResetPassword;
+
