@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import { useAuth } from "./Authcontent";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
-import "dotenv/config";
 import { Sidebar } from "./account";
 
 const api_url = process.env.api_url;
@@ -400,3 +399,4 @@ function Edit_Account() {
 }
 
 export default Edit_Account;
+
