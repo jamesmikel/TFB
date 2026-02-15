@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Heading from "./Header";
 import Footer from "./Footer";
-import "dotenv/config";
 const api_url = process.env.api_url; // or ngrok/localhost:5000
 
 function ForgotPassword() {
@@ -135,3 +134,4 @@ function ForgotPassword() {
 }
 
 export default ForgotPassword;
+
