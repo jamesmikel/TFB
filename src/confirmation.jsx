@@ -6,7 +6,7 @@ import { useToken } from "./TokenDetails";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const api_url = process.env.api_url;
+const api_url =process.env.REACT_APP_API_URL;
 
 const SubmitDeposit = async (data) => {
   const response = await axios.post(`${api_url}/deposit`, data, {
@@ -171,4 +171,5 @@ export default function ConfirmDeposit() {
     </div>
   );
 }
+
 
