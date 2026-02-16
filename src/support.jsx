@@ -6,7 +6,7 @@ import axios from "axios";
 import { useAuth } from "./Authcontent";
 import React, { useState } from "react";
 
-const api_url = process.env.api_url;
+const api_url =process.env.REACT_APP_API_URL ;
 
 function ContactForm() {
   const { isLoggedIn, user } = useAuth();
@@ -249,4 +249,5 @@ const Support = () => {
   );
 };
 export default Support;
+
 
