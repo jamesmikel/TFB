@@ -6,7 +6,7 @@ import { useToken } from "./TokenDetails";
 import { useState } from "react";
 import { useAuth3 } from "./AuthContent3";
 import { useNavigate } from "react-router-dom";
-const api_url = process.env.api_url;
+const api_url =process.env.REACT_APP_API_URL;
 
 const SubmitWithdrawal = async (data) => {
   const response = await axios.post(`${api_url}/api/miner/withdraw`, data, {
@@ -193,4 +193,5 @@ export default function ConfirmWithdrawal() {
     </div>
   );
 }
+
 
