@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 import axios from "axios";
 
 const AuthContext4 = createContext();
-const api_url = process.env.api_url;
+const api_url =process.env.REACT_APP_API_URL;
 
 export const AuthProvider4 = ({ children }) => {
   const [transactions, setTransactions] = useState([]);
@@ -74,4 +74,5 @@ export const useAuth4 = () => {
   }
   return context;
 };
+
 
