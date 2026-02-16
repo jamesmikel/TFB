@@ -4,7 +4,7 @@ import Heading from "./Header";
 import Footer from "./Footer";
 
 function ResetPassword() {
-  const api_url = process.env.api_url;
+  const api_url =process.env.REACT_APP_API_URL ;
   const [searchParams] = useSearchParams();
   const token = searchParams.get("token");
   const navigate = useNavigate();
@@ -206,4 +206,5 @@ function ResetPassword() {
 }
 
 export default ResetPassword;
+
 
