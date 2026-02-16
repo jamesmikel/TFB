@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import axios from "axios";
 
 import { useAuth } from "./Authcontent";
-const api_url = process.env.api_url;
+const api_url =process.env.REACT_APP_API_URL ;
 export default function Login() {
   const navigate = useNavigate();
   const { checkAuth } = useAuth();
@@ -118,4 +118,5 @@ export default function Login() {
     </div>
   );
 }
+
 
