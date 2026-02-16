@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import { useAuth } from "./Authcontent";
 
 import { useNavigate } from "react-router-dom";
-const api_url = process.env.api_url;
+const api_url =process.env.REACT_APP_API_URL ;
 
 function ProfilePicUploader() {
   const [profilePic, setProfilePic] = useState(null); // URL for preview
@@ -109,4 +109,5 @@ function ProfilePicUploader() {
 }
 
 export default ProfilePicUploader;
+
 
