@@ -6,7 +6,7 @@ import { useAuth } from "./Authcontent";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
 
-const api_url = process.env.api_url;
+const api_url =process.env.REACT_APP_API_URL;
 
 const Signup_user = async (data) => {
   const response = await axios.post(`${api_url}/signup`, data, {
@@ -452,4 +452,5 @@ function Signup() {
 }
 
 export default Signup;
+
 
