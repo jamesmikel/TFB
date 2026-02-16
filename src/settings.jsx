@@ -7,7 +7,7 @@ import axios from "axios";
 import { useSearchParams } from "react-router-dom";
 import { Sidebar } from "./account";
 
-const api_url = process.env.api_url;
+const api_url =process.env.REACT_APP_API_URL;
 
 const Signup_user = async (data) => {
   const response = await axios.post(`${api_url}/edit-account`, data, {
@@ -399,4 +399,5 @@ function Edit_Account() {
 }
 
 export default Edit_Account;
+
 
