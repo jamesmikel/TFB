@@ -14,7 +14,7 @@ export function Sidebar({ open }) {
   const [clicked, setClicked] = useState(false);
   const { isLoggedIn, loading, user, logout } = useAuth();
 
-  navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     if (!loading && !isLoggedIn) {
       navigate("/");
@@ -97,7 +97,7 @@ export default function Account() {
   const { isLoggedIn, loading } = useAuth();
   const { miningPlan } = useAuth3();
 
-  navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     if (miningPlan?.profitComplete === true) {
       alert("Operation concluded!");
@@ -207,3 +207,4 @@ export default function Account() {
     </div>
   );
 }
+
