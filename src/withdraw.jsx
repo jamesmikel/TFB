@@ -2,11 +2,13 @@ import Footer from "./Footer";
 import Heading from "./Header";
 import { Sidebar } from "./account";
 import { useState } from "react";
+import {  useNavigate } from "react-router-dom";
 import { useAuth } from "./Authcontent";
 import { useToken } from "./TokenDetails";
 export default function Withdrawal() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { chosenWallet, setChosenWallet } = useToken();
+  const navigate = useNavigate();
 
   const { user } = useAuth();
   const toggleSidebar = () => {
@@ -96,3 +98,4 @@ export default function Withdrawal() {
     </div>
   );
 }
+
