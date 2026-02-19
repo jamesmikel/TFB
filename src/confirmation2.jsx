@@ -58,9 +58,9 @@ export default function ConfirmWithdrawal() {
     } catch (err) {
       console.log("Withdrawal error", err);
       if (err.response?.status === 500) {
-        alert("Server error during deposit. Please try again.");
+        alert("Server error during withdrawal. Please try again.");
       } else {
-        alert("Deposit failed.");
+        alert("Withdrawal failed.");
       }
     } finally {
       setLoading(false);
@@ -193,5 +193,6 @@ export default function ConfirmWithdrawal() {
     </div>
   );
 }
+
 
 
