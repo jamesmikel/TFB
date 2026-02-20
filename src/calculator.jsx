@@ -116,8 +116,8 @@ export class CryptoMiner {
     return {
       userId: this.userId,
       deposit: this.depositAmount?.toFixed(2),
-      currentProfit: this.currentProfit?.toFixed(6),
-      totalBalance: displayBalance.toFixed(6),
+      currentProfit: Number(displayProfit).toFixed(6),
+      currentProfit: Number(displayBalance).toFixed(6),
       profitPercentage:
         this.depositAmount > 0
           ? ((displayProfit / this.depositAmount) * 100).toFixed(2)
@@ -265,3 +265,4 @@ export const usePrices = () => {
   }
   return context;
 };
+
