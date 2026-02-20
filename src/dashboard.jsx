@@ -155,7 +155,7 @@ export default function Dashboard() {
         />
         <User
           h3={ip}
-          text="Current Ip Adress"
+          text="Current IP Address"
           img="https://i.imgur.com/iQDXqJY.png"
         />
       </div>
@@ -215,3 +215,4 @@ export default function Dashboard() {
     </div>
   );
 }
+
