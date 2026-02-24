@@ -15,7 +15,7 @@ function ContactForm() {
 
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: user?.name || "",
+    name: user?.full_name || "",
     email: user?.email || "",
     message: "",
   });
@@ -50,7 +50,7 @@ function ContactForm() {
     setLoading(false);
 
     // simulate reload by resetting form
-    setFormData({ name: user?.name|| "", email: user?.email || "", message: "" });
+    setFormData({ name: user?.full_name|| "", email: user?.email || "", message: "" });
   };
 
   return (
@@ -249,6 +249,7 @@ const Support = () => {
   );
 };
 export default Support;
+
 
 
 
